@@ -24,27 +24,28 @@
 
         </nav>
         <div class="information">
+            <img src="img/mobile.png" class="mobile">
             <div id="circle">
-                <div class="one">
+                <div class="feature one">
                     <img src="img/camera.png">
                     <div>
                     <h1>Camera </h1>
                     <p>12 MP, Ultra Wide Lens</p>
                     </div>
                 </div>
-                <div class="two"><img src="img/battery.png">
+                <div class="feature two"><img src="img/battery.png">
                     <div>
                     <h1>Battery </h1>
                     <p>4500 mAh</p>
                     </div>
                 </div>
-                <div class="three"><img src="img/processor.png">
+                <div class="feature three"><img src="img/processor.png">
                     <div>
                     <h1>Processor </h1>
                     <p>Snapdragon 665</p>
                     </div>
                 </div>
-                <div class="four"><img src="img/display.png">
+                <div class="feature four"><img src="img/display.png">
                     <div>
                     <h1>Display </h1>
                     <p>Amoled 6.65" </p>
@@ -53,7 +54,32 @@
 
             </div>
         </div>
+        <div class="controls">
+            <img src="img/arrow.png" id="up">
+            <h3>Features</h3>
+            <img src="img/arrow.png" id="down">
+        </div>
     </div>
-    
+    <script>
+        var circle = document.getElementById("circle");
+        var up = document.getElementById("up");
+        var down = document.getElementById("down");
+        var rotateValue= circle.style.transform; //rotacija kruga
+        var rotateSum;
+
+        up.onclick = function() 
+        {
+            rotateSum= rotateValue + "rotate(-90deg)";
+            rotateSum= circle.style.transform;
+            rotateValue = rotateSum;
+        }
+        down.onclick = function() 
+        {
+            rotateSum= rotateValue + "rotate(90deg)";
+            rotateSum= circle.style.transform;
+            rotateValue = rotateSum;
+        }
+
+    </script>
 </body>
 </html>
